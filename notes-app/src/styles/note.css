@@ -1,0 +1,115 @@
+.note {
+  margin: auto;
+  width: 45vw;
+  height: 80vh;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  padding: 10px;
+  background-color: rgb(27, 28, 36);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0.2rem 0.2rem 0.4em black, -0.2rem 0.2rem 0.4em black;
+}
+
+.note > * {
+  margin: 5px;
+}
+
+.note .text {
+  border: 0;
+  background-color: inherit;
+  resize: none;
+  text-align: left;
+  display: block;
+  padding: 5px;
+  color: inherit;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 300;
+}
+
+.note .text:focus {
+  outline: 0;
+}
+
+.note .text::placeholder {
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+
+.note .text:focus::placeholder {
+  opacity: 0;
+}
+
+.note .content-wrapper {
+  overflow: auto;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.note .title-wrapper {
+  display: flex;
+}
+
+.note .title {
+  font-size: 1.4em;
+  flex-grow: 1;
+}
+
+.note .content {
+  white-space: pre;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2em;
+  background-color: rgb(19, 19, 22);
+  box-shadow: inset 0rem 0rem 0.4em rgba(0, 0, 0, 0.384);
+}
+
+.note .icons {
+  font-size: large;
+  align-self: flex-end;
+  padding: 7px;
+}
+
+.note .icon {
+  color: white;
+  text-align: right;
+  align-self: flex-end;
+  padding: 3px;
+  margin: 7px;
+  filter: drop-shadow(0.2rem 0.2rem 0.2em black);
+}
+
+.note .icon:active {
+  color: rgb(185, 185, 185);
+  filter: drop-shadow(0 0 0 black);
+}
+
+.note .save.saving {
+  transition: filter 0.1s;
+  filter: drop-shadow(0 0 0 black);
+  animation: save-rotation 0.4s infinite linear;
+}
+
+.note .delete {
+  color: rgb(255, 117, 117);
+}
+
+.note .delete:active {
+  color: rgb(201, 97, 97);
+}
+
+.note .close {
+  font-size: 1.2em;
+}
+
+@keyframes save-rotation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}

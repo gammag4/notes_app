@@ -1,0 +1,46 @@
+.note-list-parent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.note-list {
+  color: white;
+  padding: 1%;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note-list > * {
+  flex: 0 0 18%;
+  height: 20vw;
+  margin: 1%;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 1400px) {
+  .note-list > * {
+    flex: 0 0 23%;
+    height: 25vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .note-list > * {
+    flex: 0 0 31.33%;
+    height: 33.33vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .note-list > * {
+    flex: 0 0 48%;
+    height: 50vw;
+  }
+}

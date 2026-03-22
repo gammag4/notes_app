@@ -1,0 +1,16 @@
+.error {
+  font-size: 1.2em;
+  font-family: inherit;
+  display: block;
+  margin: 6px;
+  padding: 10px;
+  border: 1px solid rgb(255, 57, 57);
+  border-radius: 10px;
+  background-color: rgb(230, 88, 88);
+  color: rgb(255, 246, 213);
+  box-shadow: 0.15rem 0.15rem 0.3em black;
+}
+
+.error:active {
+  background-color: rgb(201, 76, 76);
+}
